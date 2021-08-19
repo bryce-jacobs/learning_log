@@ -9,4 +9,4 @@ def topics(request): # topics() func takes request obj as param.
     """Show all topics."""
     topics = Topic.objects.order_by('date_added') # this is a db query. It's so clean!!
     context = {'topics': topics}
-    return render(request, 'learning_logs/topics.html', context)
+    return render(request, 'learning_logs/topics.html', context
