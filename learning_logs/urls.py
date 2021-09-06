@@ -7,4 +7,12 @@ urlpatterns = [
     path('', views.index, name='index'),
     # Topics page
     path('topics/',views.topics,name='topics'),
+    # Page for specific topic
+    path('topics/<int:topic_id>/', views.topic, name='topic'),
+    # Page for users to add new topics
+    path('new_topic/', views.new_topic, name='new_topic'),
+    # Page for add new entry for given topic.
+    path('new_entry/<int:topic_id>/', views.new_entry, name='new_entry'),
+    # Page for editing an entry.
+    path('edit_entry/<int:entry_id>/', views.edit_entry, name='edit_entry'),
 ]
